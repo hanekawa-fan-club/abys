@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
         SDL_WINDOWPOS_CENTERED,  // Y-position
         800,                     // Width
         600,                     // Height
-        SDL_WINDOW_SHOWN        // Window flags
+        SDL_WINDOW_SHOWN         // Window flags
     );
 
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 
     std::vector<Point> currentStroke; // Store current stroke points
     std::vector<std::vector<Point>> allStrokes; // Store all strokes
-    std::vector<std::vector<Point>> undoStack; // Store strokes for undo
+    std::vector<std::vector<Point>> undoStack;  // Store strokes for undo
 
     while (!quit) {
         while (SDL_PollEvent(&event)) {
